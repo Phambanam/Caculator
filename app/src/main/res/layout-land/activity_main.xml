@@ -6,29 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
+
     <EditText
         android:id="@+id/result"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:focusable="true"
-        android:inputType="numberSigned|numberDecimal"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/operation"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_10sdp"
+        android:focusable="true"
+        android:gravity="right"
+        android:inputType="numberSigned|numberDecimal"
         android:padding="@dimen/_10sdp"
         android:textSize="@dimen/_18ssp"
-        android:autofillHints=""
-        android:gravity="right"/><![CDATA[
-        />
-
-    />
-
-
-
-
-    ]]>
+        app:layout_constraintEnd_toStartOf="@id/operation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/newNumber"
@@ -39,17 +32,22 @@
         android:padding="@dimen/_10sdp"
         android:textSize="@dimen/_18ssp"
         app:layout_constraintBottom_toBottomOf="@id/result"
-        app:layout_constraintStart_toEndOf="@id/operation" />
+        app:layout_constraintStart_toEndOf="@id/operation"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_18ssp"
         app:layout_constraintBottom_toBottomOf="@id/result"
         app:layout_constraintStart_toEndOf="@id/result"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:padding="@dimen/_5sdp"
-        android:textSize="@dimen/_18ssp"/>
+        tools:ignore="SpeakableTextPresentCheck" />
         />
     <Button
         android:id="@+id/button7"
@@ -206,5 +204,15 @@
         app:layout_constraintTop_toBottomOf="@id/button1"
         app:layout_constraintStart_toEndOf="@id/buttonEquals"
         android:text="+"
+        android:textSize="@dimen/_18ssp"/>
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_marginStart="@dimen/_5sdp"
+
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="@id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@id/buttonDivide"
+        android:text="AC"
         android:textSize="@dimen/_18ssp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

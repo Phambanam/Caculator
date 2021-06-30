@@ -5,43 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    >
+
     <EditText
         android:id="@+id/result"
-        android:focusable="true"
-        android:inputType="numberSigned|numberDecimal"
         android:layout_width="@dimen/_210sdp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/_10sdp"
+        android:focusable="true"
+        android:inputType="numberSigned|numberDecimal"
         android:padding="@dimen/_10sdp"
         android:textSize="@dimen/_18ssp"
-        android:autofillHints="" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
         />
+
+
     <EditText
         android:id="@+id/newNumber"
         android:layout_width="@dimen/_210sdp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/_10sdp"
+        android:inputType="numberSigned|numberDecimal"
         android:padding="@dimen/_10sdp"
         android:textSize="@dimen/_18ssp"
-        android:inputType="numberSigned|numberDecimal"/>
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
     <EditText
         android:id="@+id/operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/result"
-        app:layout_constraintEnd_toStartOf="@id/newNumber"
         android:layout_margin="@dimen/_20sdp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:padding="@dimen/_5sdp"
-        android:textSize="@dimen/_18ssp"/>
-        />
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintEnd_toStartOf="@id/newNumber"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <Button
         android:id="@+id/button7"
         android:layout_width="@dimen/_50sdp"
@@ -79,7 +89,7 @@
         android:layout_height="@dimen/_50sdp"
         app:layout_constraintTop_toBottomOf="@id/newNumber"
         app:layout_constraintStart_toEndOf="@id/button9"
-        android:text="/"
+        android:text="@string/divide"
         android:textSize="@dimen/_18ssp"/>
     <Button
         android:id="@+id/button4"
@@ -149,16 +159,18 @@
         app:layout_constraintStart_toEndOf="@id/button2"
         android:text="3"
         android:textSize="@dimen/_18ssp"/>
+
     <Button
         android:id="@+id/buttonMinus"
-        android:layout_marginTop="@dimen/_5sdp"
         android:layout_width="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_5sdp"
         android:layout_height="@dimen/_50sdp"
-        app:layout_constraintTop_toBottomOf="@id/button4"
-        app:layout_constraintStart_toEndOf="@id/button3"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:text="-"
-        android:textSize="@dimen/_18ssp"/>
+        android:textColor="#607D8B"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toEndOf="@id/button3"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
     <Button
         android:id="@+id/button0"
         android:layout_marginTop="@dimen/_5sdp"
@@ -178,16 +190,18 @@
         app:layout_constraintStart_toEndOf="@id/button0"
         android:text="."
         android:textSize="@dimen/_18ssp"/>
+
     <Button
         android:id="@+id/buttonEquals"
-        android:layout_marginStart="@dimen/_5sdp"
         android:layout_width="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_5sdp"
         android:layout_height="@dimen/_50sdp"
-        app:layout_constraintTop_toBottomOf="@id/button1"
-        app:layout_constraintStart_toEndOf="@id/buttonDot"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:text="="
-        android:textSize="@dimen/_18ssp"/>
+        android:textColor="#607D8B"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toEndOf="@id/buttonDot"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
     <Button
         android:id="@+id/buttonAdd"
         android:layout_marginTop="@dimen/_5sdp"
@@ -197,5 +211,15 @@
         app:layout_constraintTop_toBottomOf="@id/button1"
         app:layout_constraintStart_toEndOf="@id/buttonEquals"
         android:text="+"
+        android:textSize="@dimen/_18ssp"/>
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@id/button0"
+        app:layout_constraintStart_toStartOf="@id/button0"
+        android:text="AC"
         android:textSize="@dimen/_18ssp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
